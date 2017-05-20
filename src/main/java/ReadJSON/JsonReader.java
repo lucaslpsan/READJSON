@@ -45,7 +45,7 @@ public class JsonReader {
     }
 
     public static String transformaJson(JSONArray jsonArray){
-        StringBuilder array = new StringBuilder("[[Data, Valor],");
+        StringBuilder array = new StringBuilder("[[\"Data\", \"Valor\"],");
         String string;
         JSONObject json;
 
@@ -54,7 +54,7 @@ public class JsonReader {
 
             json = jsonArray.getJSONObject(i);
 
-            array.append(json.get("data") + ",");
+            array.append("\"" + json.get("data") + "\",");
             array.append(json.get("valor") + "],");
         }
 
