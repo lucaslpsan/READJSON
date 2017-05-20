@@ -71,5 +71,9 @@ public class JsonReader {
         System.out.println(json.get("data"));*/
         System.out.println(transformaJson(jsonArray));
 
+        //Obtém a primeira e última data, para colocar no banco
+        System.out.println(jsonArray.getJSONObject(0).get("data"));
+        System.out.println(jsonArray.getJSONObject(jsonArray.length() - 1).get("data"));
+
     }
 }
